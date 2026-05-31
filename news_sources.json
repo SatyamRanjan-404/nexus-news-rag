@@ -1,0 +1,641 @@
+[
+  {
+    "name": "BBC World",
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "category": "World",
+    "icon": "🌍",
+    "enabled": true
+  },
+  {
+    "name": "BBC Technology",
+    "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "category": "Technology",
+    "icon": "💻",
+    "enabled": true
+  },
+  {
+    "name": "BBC Science",
+    "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+    "category": "Science",
+    "icon": "🔬",
+    "enabled": true
+  },
+  {
+    "name": "Al Jazeera",
+    "url": "https://www.aljazeera.com/xml/rss/all.xml",
+    "category": "World",
+    "icon": "🌐",
+    "enabled": true
+  },
+  {
+    "name": "The Guardian World",
+    "url": "https://www.theguardian.com/world/rss",
+    "category": "World",
+    "icon": "📰",
+    "enabled": true
+  },
+  {
+    "name": "The Guardian Tech",
+    "url": "https://www.theguardian.com/technology/rss",
+    "category": "Technology",
+    "icon": "📰",
+    "enabled": true
+  },
+  {
+    "name": "Reuters Business",
+    "url": "https://feeds.reuters.com/reuters/businessNews",
+    "category": "Business",
+    "icon": "📈",
+    "enabled": true
+  },
+  {
+    "name": "Reuters US",
+    "url": "https://feeds.reuters.com/Reuters/domesticNews",
+    "category": "US News",
+    "icon": "🇺🇸",
+    "enabled": true
+  },
+  {
+    "name": "Reuters Tech",
+    "url": "https://feeds.reuters.com/reuters/technologyNews",
+    "category": "Technology",
+    "icon": "⚙️",
+    "enabled": true
+  },
+  {
+    "name": "CNBC Top News",
+    "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+    "category": "Business",
+    "icon": "💰",
+    "enabled": true
+  },
+  {
+    "name": "CNBC Finance",
+    "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+    "category": "Business",
+    "icon": "💵",
+    "enabled": true
+  },
+  {
+    "name": "MarketWatch",
+    "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+    "category": "Markets",
+    "icon": "📊",
+    "enabled": true
+  },
+  {
+    "name": "NYT Business",
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "category": "Business",
+    "icon": "🗞️",
+    "enabled": true
+  },
+  {
+    "name": "NYT World",
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "category": "World",
+    "icon": "🗞️",
+    "enabled": true
+  },
+  {
+    "name": "NYT Technology",
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+    "category": "Technology",
+    "icon": "🗞️",
+    "enabled": true
+  },
+  {
+    "name": "WSJ Markets",
+    "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
+    "category": "Markets",
+    "icon": "📉",
+    "enabled": true
+  },
+  {
+    "name": "Ars Technica",
+    "url": "https://feeds.arstechnica.com/arstechnica/index",
+    "category": "Technology",
+    "icon": "🖥️",
+    "enabled": true
+  },
+  {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/feed/",
+    "category": "Technology",
+    "icon": "🚀",
+    "enabled": true
+  },
+  {
+    "name": "Wired",
+    "url": "https://www.wired.com/feed/rss",
+    "category": "Technology",
+    "icon": "⚡",
+    "enabled": true
+  },
+  {
+    "name": "NASA News",
+    "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+    "category": "Science",
+    "icon": "🚀",
+    "enabled": true
+  },
+  {
+    "name": "Nature News",
+    "url": "https://www.nature.com/nature.rss",
+    "category": "Science",
+    "icon": "🧬",
+    "enabled": true
+  },
+  {
+    "name": "ESPN Top Stories",
+    "url": "https://www.espn.com/espn/rss/news",
+    "category": "Sports",
+    "icon": "⚽",
+    "enabled": true
+  },
+  {
+    "name": "AP Top News",
+    "url": "https://rsshub.app/apnews/topics/apf-topnews",
+    "category": "World",
+    "icon": "📡",
+    "enabled": true
+  },
+  {
+    "name": "Politico",
+    "url": "https://rss.politico.com/politics-news.xml",
+    "category": "Politics",
+    "icon": "🏛️",
+    "enabled": true
+  },
+  {
+    "name": "The Hill",
+    "url": "https://thehill.com/rss/syndicator/19110",
+    "category": "Politics",
+    "icon": "🏛️",
+    "enabled": true
+  },
+  {
+    "name": "MIT Tech Review",
+    "url": "https://www.technologyreview.com/stories.rss",
+    "category": "Technology",
+    "icon": "🎓",
+    "enabled": true
+  },
+  {
+    "name": "Bloomberg Markets",
+    "url": "https://feeds.bloomberg.com/markets/news.rss",
+    "category": "Markets",
+    "icon": "💹",
+    "enabled": true
+  },
+  {
+    "name": "Forbes Business",
+    "url": "https://www.forbes.com/business/feed/",
+    "category": "Business",
+    "icon": "💼",
+    "enabled": true
+  },
+  {
+    "name": "Sky News World",
+    "url": "https://feeds.skynews.com/feeds/rss/world.xml",
+    "category": "World",
+    "icon": "🌏",
+    "enabled": true
+  },
+  {
+    "name": "DW News",
+    "url": "https://rss.dw.com/rdf/rss-en-all",
+    "category": "World",
+    "icon": "🌍",
+    "enabled": true
+  },
+  {
+    "name": "France 24",
+    "url": "https://www.france24.com/en/rss",
+    "category": "World",
+    "icon": "🇫🇷",
+    "enabled": true
+  },
+  {
+    "name": "CBC News World",
+    "url": "https://www.cbc.ca/cmlink/rss-world",
+    "category": "World",
+    "icon": "🇨🇦",
+    "enabled": true
+  },
+  {
+    "name": "The Sydney Morning Herald",
+    "url": "https://www.smh.com.au/rss/feed.xml",
+    "category": "World",
+    "icon": "🇦🇺",
+    "enabled": true
+  },
+  {
+    "name": "Times of India",
+    "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+    "category": "Asia",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+    "category": "Asia",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "Der Spiegel (International)",
+    "url": "https://www.spiegel.de/international/index.rss",
+    "category": "Europe",
+    "icon": "🇩🇪",
+    "enabled": true
+  },
+  {
+    "name": "Jerusalem Post",
+    "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx",
+    "category": "Middle East",
+    "icon": "🇮🇱",
+    "enabled": true
+  },
+  {
+    "name": "South China Morning Post",
+    "url": "https://www.scmp.com/rss/91/feed",
+    "category": "Asia",
+    "icon": "🇭🇰",
+    "enabled": true
+  },
+  {
+    "name": "AllAfrica Top Stories",
+    "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+    "category": "Africa",
+    "icon": "🌍",
+    "enabled": true
+  },
+  {
+    "name": "Japan Today",
+    "url": "https://japantoday.com/feed",
+    "category": "Asia",
+    "icon": "🇯🇵",
+    "enabled": true
+  },
+  {
+    "name": "Buenos Aires Times",
+    "url": "https://www.batimes.com.ar/feed",
+    "category": "Latin America",
+    "icon": "🇦🇷",
+    "enabled": true
+  },
+  {
+    "name": "The Independent World",
+    "url": "https://www.independent.co.uk/news/world/rss",
+    "category": "Europe",
+    "icon": "🇬🇧",
+    "enabled": true
+  },
+  {
+    "name": "Indian Express",
+    "url": "https://indianexpress.com/feed/",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "NDTV India",
+    "url": "https://feeds.feedburner.com/ndtvnews-india-news",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "Business Standard India",
+    "url": "https://www.business-standard.com/rss/home_page_top_stories.rss",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "Deccan Herald",
+    "url": "https://www.deccanherald.com/rss/national.xml",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "The Print",
+    "url": "https://theprint.in/feed/",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "Firstpost",
+    "url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/india.xml",
+    "category": "India",
+    "icon": "🇮🇳",
+    "enabled": true
+  },
+  {
+    "name": "Channel News Asia",
+    "url": "https://www.channelnewsasia.com/rssfeeds/8395986",
+    "category": "Asia",
+    "icon": "🇸🇬",
+    "enabled": true
+  },
+  {
+    "name": "The Straits Times",
+    "url": "https://www.straitstimes.com/news/asia/rss.xml",
+    "category": "Asia",
+    "icon": "🇸🇬",
+    "enabled": true
+  },
+  {
+    "name": "The Korea Herald",
+    "url": "http://www.koreaherald.com/common_prog/rssdisp.php?ct=020000000000.xml",
+    "category": "Asia",
+    "icon": "🇰🇷",
+    "enabled": true
+  },
+  {
+    "name": "Bangkok Post",
+    "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+    "category": "Asia",
+    "icon": "🇹🇭",
+    "enabled": true
+  },
+  {
+    "name": "Taipei Times",
+    "url": "https://www.taipeitimes.com/rss/feeds/taiwan.xml",
+    "category": "Asia",
+    "icon": "🇹🇼",
+    "enabled": true
+  },
+  {
+    "name": "Nikkei Asia",
+    "url": "https://asia.nikkei.com/rss/feed/nar",
+    "category": "Asia",
+    "icon": "🇯🇵",
+    "enabled": true
+  },
+  {
+    "name": "The Jakarta Post",
+    "url": "https://www.thejakartapost.com/feed",
+    "category": "Asia",
+    "icon": "🇮🇩",
+    "enabled": true
+  },
+  {
+    "name": "Philippine Daily Inquirer",
+    "url": "https://newsinfo.inquirer.net/feed",
+    "category": "Asia",
+    "icon": "🇵🇭",
+    "enabled": true
+  },
+   {
+    "name": "Foreign Policy",
+    "url": "https://foreignpolicy.com/feed/",
+    "category": "Geopolitics",
+    "icon": "🌐",
+    "enabled": true
+  },
+  {
+    "name": "The Diplomat",
+    "url": "https://thediplomat.com/feed/",
+    "category": "Geopolitics",
+    "icon": "🌏",
+    "enabled": true
+  },
+  {
+    "name": "War on the Rocks",
+    "url": "https://warontherocks.com/feed/",
+    "category": "Geopolitics",
+    "icon": "⚔️",
+    "enabled": true
+  },
+  {
+    "name": "Council on Foreign Relations",
+    "url": "https://www.cfr.org/rss-feeds",
+    "category": "Geopolitics",
+    "icon": "🏛️",
+    "enabled": true
+  },
+
+  {
+    "name": "ESPN",
+    "url": "https://www.espn.com/espn/rss/news",
+    "category": "Sports",
+    "icon": "🏆",
+    "enabled": true
+  },
+  {
+    "name": "Sky Sports",
+    "url": "https://www.skysports.com/rss/12040",
+    "category": "Sports",
+    "icon": "⚽",
+    "enabled": true
+  },
+  {
+    "name": "Cricbuzz",
+    "url": "https://www.cricbuzz.com/cricket-news/rss",
+    "category": "Sports",
+    "icon": "🏏",
+    "enabled": true
+  },
+  {
+    "name": "NBA News",
+    "url": "https://www.nba.com/rss/nba_rss.xml",
+    "category": "Sports",
+    "icon": "🏀",
+    "enabled": true
+  },
+
+  {
+    "name": "Variety",
+    "url": "https://variety.com/feed/",
+    "category": "Movies",
+    "icon": "🎬",
+    "enabled": true
+  },
+  {
+    "name": "The Hollywood Reporter",
+    "url": "https://www.hollywoodreporter.com/feed/",
+    "category": "Movies",
+    "icon": "🍿",
+    "enabled": true
+  },
+  {
+    "name": "Empire Magazine",
+    "url": "https://www.empireonline.com/movies/rss/",
+    "category": "Movies",
+    "icon": "🎥",
+    "enabled": true
+  },
+  {
+    "name": "Screen Rant",
+    "url": "https://screenrant.com/feed/",
+    "category": "Movies",
+    "icon": "📽️",
+    "enabled": true
+  },
+
+  {
+    "name": "Lonely Planet",
+    "url": "https://www.lonelyplanet.com/articles/feed/rss",
+    "category": "Travel",
+    "icon": "✈️",
+    "enabled": true
+  },
+  {
+    "name": "Travel + Leisure",
+    "url": "https://www.travelandleisure.com/feed",
+    "category": "Travel",
+    "icon": "🌴",
+    "enabled": true
+  },
+  {
+    "name": "The Points Guy",
+    "url": "https://thepointsguy.com/feed/",
+    "category": "Travel",
+    "icon": "🛫",
+    "enabled": true
+  },
+  {
+    "name": "Nomadic Matt",
+    "url": "https://www.nomadicmatt.com/feed/",
+    "category": "Travel",
+    "icon": "🎒",
+    "enabled": true
+  },
+
+  {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/feed/",
+    "category": "Technology",
+    "icon": "💻",
+    "enabled": true
+  },
+  {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/rss/index.xml",
+    "category": "Technology",
+    "icon": "📱",
+    "enabled": true
+  },
+  {
+    "name": "Ars Technica",
+    "url": "https://feeds.arstechnica.com/arstechnica/index",
+    "category": "Technology",
+    "icon": "⚙️",
+    "enabled": true
+  },
+  {
+    "name": "Wired",
+    "url": "https://www.wired.com/feed/rss",
+    "category": "Technology",
+    "icon": "🔬",
+    "enabled": true
+  },
+
+  {
+    "name": "CoinDesk",
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+    "category": "Crypto",
+    "icon": "₿",
+    "enabled": true
+  },
+  {
+    "name": "Cointelegraph",
+    "url": "https://cointelegraph.com/rss",
+    "category": "Crypto",
+    "icon": "🪙",
+    "enabled": true
+  },
+
+  {
+    "name": "Reuters Business",
+    "url": "https://feeds.reuters.com/reuters/businessNews",
+    "category": "Business",
+    "icon": "📈",
+    "enabled": true
+  },
+  {
+    "name": "Bloomberg Markets",
+    "url": "https://feeds.bloomberg.com/markets/news.rss",
+    "category": "Business",
+    "icon": "💹",
+    "enabled": true
+  },
+  {
+    "name": "Financial Times",
+    "url": "https://www.ft.com/rss/home",
+    "category": "Business",
+    "icon": "💰",
+    "enabled": true
+  },
+
+  {
+    "name": "Nature News",
+    "url": "https://www.nature.com/nature.rss",
+    "category": "Science",
+    "icon": "🔬",
+    "enabled": true
+  },
+  {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/rss/top.xml",
+    "category": "Science",
+    "icon": "🧪",
+    "enabled": true
+  },
+  {
+    "name": "NASA Breaking News",
+    "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+    "category": "Science",
+    "icon": "🚀",
+    "enabled": true
+  },
+
+  {
+    "name": "PC Gamer",
+    "url": "https://www.pcgamer.com/rss/",
+    "category": "Gaming",
+    "icon": "🎮",
+    "enabled": true
+  },
+  {
+    "name": "IGN",
+    "url": "https://feeds.ign.com/ign/all",
+    "category": "Gaming",
+    "icon": "🕹️",
+    "enabled": true
+  },
+  {
+    "name": "GameSpot",
+    "url": "https://www.gamespot.com/feeds/mashup/",
+    "category": "Gaming",
+    "icon": "🎲",
+    "enabled": true
+  },
+
+  {
+    "name": "Billboard",
+    "url": "https://www.billboard.com/feed/",
+    "category": "Music",
+    "icon": "🎵",
+    "enabled": true
+  },
+  {
+    "name": "Rolling Stone",
+    "url": "https://www.rollingstone.com/music/music-news/feed/",
+    "category": "Music",
+    "icon": "🎸",
+    "enabled": true
+  }
+]

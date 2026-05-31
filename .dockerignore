@@ -1,0 +1,23 @@
+# Ignore local Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Ignore local database storage (Docker Compose will mount this cleanly via volumes instead)
+chroma_db/
+
+# Ignore locally cached Python compilation files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local data files so we start clean
+fetched_articles.json
+chunked_articles.json
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+.git/

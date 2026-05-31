@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python caching
+__pycache__/
+*.pyc
+
+# Local Data & Database (Hugging Face creates its own fresh versions)
+chroma_db/
+fetched_articles.json
+chunked_articles.json
+
+# Environment Variables (Contains your secret API keys!)
+.env
+
+# System files
+.DS_Store
+Thumbs.db

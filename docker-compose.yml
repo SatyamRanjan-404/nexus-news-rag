@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  news-rag-app:
+    # Build the image using the Dockerfile in this current directory
+    build: .
+    
+    # Connect our laptop's port 8501 to the container's port 8501
+    ports:
+      - "8501:8501"
+      
+    # Pass our secret API keys into the container
+    env_file:
+      - .env
+      
+    # VOLUMES: This is critical. Containers are "ephemeral" (amnesiac). 
+    # If the container crashes, anything saved inside it is deleted forever.
+    # Volumes map a folder on your laptop directly to a folder inside the container.
+    # This ensures ChromaDB's data survives container restarts!
+    volumes:
+      - .:/app
+      - ./chroma_db:/app/chroma_db
+      - ./fetched_articles.json:/app/fetched_articles.json
+      - ./chunked_articles.json:/app/chunked_articles.json
+      - ./logo.png:/app/logo.png
