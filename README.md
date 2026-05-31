@@ -502,16 +502,5 @@ The application will detect changes within:
 
 The scheduler will include the new source during its next ingestion cycle.
 
-To temporarily disable a feed:
-
-```json
-"enabled": false
-```
 
 ---
-
-# License
-
-This project is released under the MIT License.
-
-See the `LICENSE` file for details.
