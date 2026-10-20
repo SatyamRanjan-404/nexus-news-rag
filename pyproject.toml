@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools-scm"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nexus-news-rag"
+version = "0.2.0"
+description = "AI-Powered RAG pipeline for news retrieval and claim checking"
+requires-python = ">=3.10"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+# ── Ruff (linter + formatter) ──────────────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]  # line length handled by formatter
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# ── Pytest ──────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+markers = [
+    "unit: fast unit tests with mocked LLM",
+    "integration: integration tests requiring real services",
+    "slow: tests that take >10s",
+]
+
+# ── MyPy ───────────────────────────────────────────────────────────
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
