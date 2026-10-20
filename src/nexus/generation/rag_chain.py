@@ -64,9 +64,11 @@ STRICT RULES:
    "I cannot find information about that in the retrieved news articles."
 4. If answering, be specific: cite the source name and date when making claims.
 5. Context articles were retrieved {date_note}.
+6. Never use emojis in your response. Maintain an objective, authoritative journalistic tone.
 
 NEWS CONTEXT:
 {context}
+
 """
 
 DATE_FORMAT = "%d %b %Y"

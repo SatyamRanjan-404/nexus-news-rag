@@ -110,6 +110,7 @@ CRITICAL RULES:
 7. For fact-checker articles (Tier 2), report their rating as "rated X by [outlet]".
 8. Count INDEPENDENT sources: if 5 outlets all copied the same wire story, 
    that is ONE independent source.
+9. Never use emojis in your response or explanation. Maintain an analytical, formal tone.
 
 CLAIM TO CHECK:
 {claim}
