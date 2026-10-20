@@ -1,0 +1,162 @@
+[
+  {
+    "id": "qa_001",
+    "category": "Banking & Economy",
+    "question": "What repo rate policy decision was announced by the RBI Monetary Policy Committee?",
+    "relevant_chunk_ids": ["art_rbi_mpc_01_chk_0", "art_rbi_mpc_01_chk_1"],
+    "expected_answer": "The RBI MPC kept the policy repo rate unchanged at 6.50% while maintaining the focus on withdrawal of accommodation to align inflation with the 4% target.",
+    "factual_entities": ["RBI", "repo rate", "6.50%", "Monetary Policy Committee"]
+  },
+  {
+    "id": "qa_002",
+    "category": "Securities Regulation",
+    "question": "What new mandate did SEBI introduce for mandatory disclosure of beneficial ownership by foreign portfolio investors?",
+    "relevant_chunk_ids": ["art_sebi_fpi_02_chk_0", "art_sebi_fpi_02_chk_2"],
+    "expected_answer": "SEBI mandated granular disclosure of all entities holding any ownership, economic interest, or control in FPIs exceeding certain AUM thresholds.",
+    "factual_entities": ["SEBI", "FPI", "beneficial ownership", "AUM thresholds"]
+  },
+  {
+    "id": "qa_003",
+    "category": "Global Health",
+    "question": "What public health guidance did WHO issue regarding emerging respiratory pathogens this winter?",
+    "relevant_chunk_ids": ["art_who_resp_03_chk_0"],
+    "expected_answer": "WHO recommended seasonal vaccination against influenza and COVID-19, improved indoor ventilation, and mask usage in crowded healthcare settings.",
+    "factual_entities": ["WHO", "vaccination", "COVID-19", "influenza"]
+  },
+  {
+    "id": "qa_004",
+    "category": "Science & Space",
+    "question": "What scientific instruments did NASA confirm are operating on the Europa Clipper mission?",
+    "relevant_chunk_ids": ["art_nasa_clipper_04_chk_1"],
+    "expected_answer": "NASA confirmed ice-penetrating radar (REASON), imaging systems, magnetometer (ECM), and thermal emission imaging systems are operational.",
+    "factual_entities": ["NASA", "Europa Clipper", "REASON radar", "magnetometer"]
+  },
+  {
+    "id": "qa_005",
+    "category": "Government Policy",
+    "question": "What incentives were outlined under the revised Production Linked Incentive (PLI) scheme for IT hardware?",
+    "relevant_chunk_ids": ["art_pib_pli_05_chk_0", "art_pib_pli_05_chk_1"],
+    "expected_answer": "The revised PLI scheme provides financial incentives averaging around 5% over net incremental sales of manufactured goods in laptops, tablets, and servers.",
+    "factual_entities": ["PLI scheme", "IT hardware", "laptops", "tablets", "servers"]
+  },
+  {
+    "id": "qa_006",
+    "category": "Corporate & Tech",
+    "question": "Why did major cloud providers report increased capital expenditure during recent quarterly earnings?",
+    "relevant_chunk_ids": ["art_tech_capex_06_chk_0"],
+    "expected_answer": "Cloud hyperscalers reported surge in capital expenditure driven by massive investments in generative AI data centers, GPUs, and network infrastructure.",
+    "factual_entities": ["cloud providers", "capital expenditure", "generative AI", "GPUs", "data centers"]
+  },
+  {
+    "id": "qa_007",
+    "category": "Energy & Climate",
+    "question": "What milestone was achieved in India's renewable energy capacity according to the Ministry of New and Renewable Energy?",
+    "relevant_chunk_ids": ["art_pib_re_07_chk_0"],
+    "expected_answer": "India crossed 200 GW of total non-fossil fuel power generation capacity, driven by rapid additions in solar and wind installations.",
+    "factual_entities": ["200 GW", "renewable energy", "solar", "wind", "MNRE"]
+  },
+  {
+    "id": "qa_008",
+    "category": "Markets",
+    "question": "How did benchmark equity indices Nifty 50 and Sensex react following the latest retail inflation data release?",
+    "relevant_chunk_ids": ["art_mint_markets_08_chk_0"],
+    "expected_answer": "Markets rallied as headline CPI inflation moderated within the central bank's tolerance band, spurring investor optimism in rate-sensitive banking and auto stocks.",
+    "factual_entities": ["Nifty 50", "Sensex", "CPI inflation", "banking stocks"]
+  },
+  {
+    "id": "qa_009",
+    "category": "Telecommunications",
+    "question": "What regulatory framework did TRAI issue regarding anti-spam measures for commercial SMS and voice calls?",
+    "relevant_chunk_ids": ["art_trai_spam_09_chk_0", "art_trai_spam_09_chk_1"],
+    "expected_answer": "TRAI mandated telecom operators to block unregistered telemarketing callers, enforce traceability of commercial message URLs, and implement whitelist verification.",
+    "factual_entities": ["TRAI", "anti-spam", "telemarketing", "traceability"]
+  },
+  {
+    "id": "qa_010",
+    "category": "Semiconductors",
+    "question": "What approvals were granted by the Union Cabinet under the India Semiconductor Mission?",
+    "relevant_chunk_ids": ["art_pib_semi_10_chk_0"],
+    "expected_answer": "The Union Cabinet approved multiple commercial semiconductor fabrication and packaging units, committing government fiscal support of 50% on project cost.",
+    "factual_entities": ["India Semiconductor Mission", "fabrication", "packaging", "50% fiscal support"]
+  },
+  {
+    "id": "qa_011",
+    "category": "Aviation",
+    "question": "What directives did the DGCA issue regarding passenger compensation for delayed flight departures?",
+    "relevant_chunk_ids": ["art_dgca_rules_11_chk_0"],
+    "expected_answer": "DGCA mandated airlines to provide refreshments and free cancellation or rescheduling if flights are delayed beyond specified block time thresholds.",
+    "factual_entities": ["DGCA", "passenger compensation", "flight delay"]
+  },
+  {
+    "id": "qa_012",
+    "category": "Agriculture & Commodities",
+    "question": "What export duty adjustments were announced on non-basmati white rice and onion shipments?",
+    "relevant_chunk_ids": ["art_pib_agri_12_chk_0"],
+    "expected_answer": "The government scrapped minimum export price restrictions and reduced export duties to support farmers following robust Kharif harvest estimates.",
+    "factual_entities": ["export duty", "non-basmati rice", "onion", "minimum export price"]
+  },
+  {
+    "id": "qa_013",
+    "category": "Defense & Strategic",
+    "question": "What major indigenous defense procurement was cleared by the Defence Acquisition Council (DAC)?",
+    "relevant_chunk_ids": ["art_dac_procure_13_chk_0"],
+    "expected_answer": "The DAC accorded Acceptance of Necessity for indigenous procurement of light combat helicopters, patrol vessels, and air defense radar systems.",
+    "factual_entities": ["Defence Acquisition Council", "Acceptance of Necessity", "indigenous"]
+  },
+  {
+    "id": "qa_014",
+    "category": "Taxation & GST",
+    "question": "What key rate rationalization decisions were discussed in the recent GST Council meeting?",
+    "relevant_chunk_ids": ["art_gst_council_14_chk_0"],
+    "expected_answer": "The GST Council clarified taxation on corporate guarantees, health insurance premiums, and reduced rates on specific cancer medications.",
+    "factual_entities": ["GST Council", "health insurance", "cancer medications"]
+  },
+  {
+    "id": "qa_015",
+    "category": "Cybersecurity",
+    "question": "What alert did CERT-In issue regarding critical vulnerabilities in widely deployed virtualization software?",
+    "relevant_chunk_ids": ["art_certin_alert_15_chk_0"],
+    "expected_answer": "CERT-In flagged remote code execution and authentication bypass vulnerabilities requiring immediate security patching.",
+    "factual_entities": ["CERT-In", "vulnerability", "remote code execution", "patching"]
+  },
+  {
+    "id": "qa_016",
+    "category": "Unanswerable / Out of Corpus",
+    "question": "What are the secret launch coordinates for the fictitious Project Chronos deep sea vessel?",
+    "relevant_chunk_ids": [],
+    "expected_answer": "I cannot find explicit details about that topic in today's collected news reports.",
+    "factual_entities": ["Project Chronos"]
+  },
+  {
+    "id": "qa_017",
+    "category": "Unanswerable / Out of Corpus",
+    "question": "What was the winning score of the 2038 Martian Rover Olympic Race?",
+    "relevant_chunk_ids": [],
+    "expected_answer": "I cannot find explicit details about that topic in today's collected news reports.",
+    "factual_entities": ["2038 Martian Rover"]
+  },
+  {
+    "id": "qa_018",
+    "category": "Unanswerable / Out of Corpus",
+    "question": "Who was appointed prime minister of the mythical island of Atlantis yesterday?",
+    "relevant_chunk_ids": [],
+    "expected_answer": "I cannot find explicit details about that topic in today's collected news reports.",
+    "factual_entities": ["Atlantis"]
+  },
+  {
+    "id": "qa_019",
+    "category": "Automotive & EV",
+    "question": "What guidelines were released under the PM E-DRIVE scheme for electric vehicle subsidies?",
+    "relevant_chunk_ids": ["art_pib_edrive_19_chk_0"],
+    "expected_answer": "The PM E-DRIVE scheme allocated budgetary support for electric two-wheelers, three-wheelers, and public transport buses with Aadhaar-linked e-vouchers.",
+    "factual_entities": ["PM E-DRIVE", "electric vehicles", "e-vouchers", "subsidies"]
+  },
+  {
+    "id": "qa_020",
+    "category": "International Trade",
+    "question": "What progress was reported on the Bilateral Investment Treaty negotiations between India and the UK?",
+    "relevant_chunk_ids": ["art_trade_uk_20_chk_0"],
+    "expected_answer": "Negotiating teams reported substantial convergence on rules of origin and service market access while continuing talks on dispute settlement provisions.",
+    "factual_entities": ["India-UK", "Bilateral Investment Treaty", "rules of origin"]
+  }
+]

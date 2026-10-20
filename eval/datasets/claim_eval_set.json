@@ -1,0 +1,222 @@
+[
+  {
+    "id": "claim_001",
+    "claim": "RBI has completely cancelled the legal tender status of all 500 rupee notes starting next month.",
+    "gold_verdict": "FALSE",
+    "category": "Currency & Finance",
+    "source_factchecker": "BOOM Live",
+    "original_rating": "False / Hoax",
+    "held_out_source": "boomlive_art_4812",
+    "claim_type": "viral_forward",
+    "human_notes": "Viral WhatsApp forward claiming 500-rupee currency demonetisation. Fact-checked as false by RBI press notification and PIB Fact Check."
+  },
+  {
+    "id": "claim_002",
+    "claim": "Government has announced a free 3-month mobile recharge for all students under the National Education Policy.",
+    "gold_verdict": "FALSE",
+    "category": "Government Schemes",
+    "source_factchecker": "PIB Fact Check",
+    "original_rating": "Fake",
+    "held_out_source": "pib_factcheck_8821",
+    "claim_type": "phishing_forward",
+    "human_notes": "Phishing link circulating on messaging apps falsely attributing free mobile recharge to the Ministry of Education."
+  },
+  {
+    "id": "claim_003",
+    "claim": "SEBI issued a formal investor warning against deepfake videos of its leadership promoting fraudulent stock trading schemes.",
+    "gold_verdict": "TRUE",
+    "category": "Securities Regulation",
+    "source_factchecker": "Factly",
+    "original_rating": "True",
+    "held_out_source": "factly_sebi_901",
+    "claim_type": "news_event",
+    "human_notes": "Official SEBI advisory cautioned the public against AI-synthesized deepfake videos impersonating SEBI officials offering guaranteed returns."
+  },
+  {
+    "id": "claim_004",
+    "claim": "Drinking boiled garlic and lemon water cures chronic diabetes within seven days without medication.",
+    "gold_verdict": "FALSE",
+    "category": "Health & Medical",
+    "source_factchecker": "Vishvas News",
+    "original_rating": "Misleading Medical Claim",
+    "held_out_source": "vishvas_health_102",
+    "claim_type": "viral_forward",
+    "human_notes": "Dangerous medical misinformation lacking scientific evidence, refuted by endocrinologists and ICMR guidelines."
+  },
+  {
+    "id": "claim_005",
+    "claim": "UNESCO has officially declared the Indian National Anthem as the best anthem in the world.",
+    "gold_verdict": "FALSE",
+    "category": "Culture & National",
+    "source_factchecker": "Alt News",
+    "original_rating": "False / Recurring Hoax",
+    "held_out_source": "altnews_unesco_771",
+    "claim_type": "viral_forward",
+    "human_notes": "Old recurring internet rumor dating back to 2008 repeatedly debunked by UNESCO spokespersons."
+  },
+  {
+    "id": "claim_006",
+    "claim": "NASA confirmed that solar radiation will cause all cellular devices to explode tonight if left connected to chargers.",
+    "gold_verdict": "FALSE",
+    "category": "Science & Tech",
+    "source_factchecker": "Snopes",
+    "original_rating": "False",
+    "held_out_source": "snopes_cosmic_rays_404",
+    "claim_type": "viral_forward",
+    "human_notes": "Recycled 'cosmic ray warning' chain message with no basis in astrophysics or consumer electronics."
+  },
+  {
+    "id": "claim_007",
+    "claim": "Reserve Bank of India maintained the policy repo rate at 6.5 percent in its recent monetary policy committee review.",
+    "gold_verdict": "TRUE",
+    "category": "Banking & Economy",
+    "source_factchecker": "Official Primary Verification",
+    "original_rating": "Confirmed by RBI Official Press Release",
+    "held_out_source": null,
+    "claim_type": "news_claim",
+    "human_notes": "Factual statement verified directly through Tier 1 RBI official MPC resolution."
+  },
+  {
+    "id": "claim_008",
+    "claim": "WHO announced that a new pandemic lockdown is being imposed worldwide next Tuesday.",
+    "gold_verdict": "FALSE",
+    "category": "Global Health",
+    "source_factchecker": "PolitiFact",
+    "original_rating": "Pants on Fire",
+    "held_out_source": "politifact_who_lockdown_33",
+    "claim_type": "conspiracy_claim",
+    "human_notes": "Fabricated conspiracy claim; WHO possesses no legal authority to mandate domestic lockdowns."
+  },
+  {
+    "id": "claim_009",
+    "claim": "New tax law will levy an automatic 18 percent GST on all cash transactions exceeding 500 rupees at local grocery shops.",
+    "gold_verdict": "FALSE",
+    "category": "Taxation",
+    "source_factchecker": "BOOM Live",
+    "original_rating": "False",
+    "held_out_source": "boomlive_gst_cash_299",
+    "claim_type": "viral_forward",
+    "human_notes": "Misrepresented GST Council meeting notes; no tax levied on everyday retail cash transactions."
+  },
+  {
+    "id": "claim_010",
+    "claim": "A massive meteor hit downtown London yesterday causing severe structural damage across the city.",
+    "gold_verdict": "FALSE",
+    "category": "World News",
+    "source_factchecker": "Snopes",
+    "original_rating": "False",
+    "held_out_source": "snopes_meteor_london_11",
+    "claim_type": "cgi_viral_video",
+    "human_notes": "CGI animation from a movie clip circulated as authentic breaking news footage."
+  },
+  {
+    "id": "claim_011",
+    "claim": "Certain commercial airlines began charging passengers for oxygen usage during mid-flight turbulence.",
+    "gold_verdict": "FALSE",
+    "category": "Aviation",
+    "source_factchecker": "Factly",
+    "original_rating": "Satire / Fake",
+    "held_out_source": "factly_airline_oxygen_81",
+    "claim_type": "satire_misunderstood",
+    "human_notes": "Satirical article reposted by social media accounts as a factual corporate policy change."
+  },
+  {
+    "id": "claim_012",
+    "claim": "India achieved over 200 GW of non-fossil fuel installed electric capacity.",
+    "gold_verdict": "TRUE",
+    "category": "Energy & Climate",
+    "source_factchecker": "PIB & MNRE Official",
+    "original_rating": "True / Official Statistics",
+    "held_out_source": null,
+    "claim_type": "news_claim",
+    "human_notes": "Verified by Ministry of New and Renewable Energy official press release."
+  },
+  {
+    "id": "claim_013",
+    "claim": "Eating unripe papayas while taking paracetamol causes fatal potassium poisoning within two hours.",
+    "gold_verdict": "FALSE",
+    "category": "Health & Medical",
+    "source_factchecker": "Alt News",
+    "original_rating": "False",
+    "held_out_source": "altnews_papaya_paracetamol_99",
+    "claim_type": "viral_forward",
+    "human_notes": "Medical hoax lacking pharmacological foundation, debunked by doctors."
+  },
+  {
+    "id": "claim_014",
+    "claim": "A secret meeting occurred yesterday between alien diplomats and world leaders in Geneva to sign a treaty.",
+    "gold_verdict": "UNVERIFIED",
+    "category": "Unsubstantiated",
+    "source_factchecker": "Automated Corpus Check",
+    "original_rating": "No Credible Evidence in Verified Corpus",
+    "held_out_source": null,
+    "claim_type": "unverifiable_rumor",
+    "human_notes": "No credible Tier 1, Tier 2, or Tier 3 reporting. RAG system must correctly abstain / flag as UNVERIFIED."
+  },
+  {
+    "id": "claim_015",
+    "claim": "TRAI has issued directions to all telecom service providers to disconnect unregistered telemarketers.",
+    "gold_verdict": "TRUE",
+    "category": "Telecommunications",
+    "source_factchecker": "Official Press Release (TRAI)",
+    "original_rating": "Verified Official Order",
+    "held_out_source": null,
+    "claim_type": "news_claim",
+    "human_notes": "Confirmed by TRAI press release and telecom regulatory circulars."
+  },
+  {
+    "id": "claim_016",
+    "claim": "All private vehicles will be banned on Sundays across all major metropolitan cities under a new central decree.",
+    "gold_verdict": "FALSE",
+    "category": "Transport",
+    "source_factchecker": "Vishvas News",
+    "original_rating": "False",
+    "held_out_source": "vishvas_sunday_ban_41",
+    "claim_type": "viral_forward",
+    "human_notes": "Fabricated transport policy order falsely bearing official ministry letterhead."
+  },
+  {
+    "id": "claim_017",
+    "claim": "The European Union approved comprehensive legislation regulating Artificial Intelligence models based on risk tiers.",
+    "gold_verdict": "TRUE",
+    "category": "Tech Regulation",
+    "source_factchecker": "Global News / Official EU Journal",
+    "original_rating": "Confirmed Legislation",
+    "held_out_source": null,
+    "claim_type": "news_claim",
+    "human_notes": "EU Artificial Intelligence Act enacted and reported across Tier 1 (EU Gazettes) and Tier 3 (BBC, Reuters)."
+  },
+  {
+    "id": "claim_018",
+    "claim": "Government is giving free laptops to everyone who forwards a WhatsApp message to ten contacts.",
+    "gold_verdict": "FALSE",
+    "category": "Government Schemes",
+    "source_factchecker": "BOOM Live",
+    "original_rating": "Scam / Phishing",
+    "held_out_source": "boomlive_laptop_forward_12",
+    "claim_type": "phishing_forward",
+    "human_notes": "Classic chain message phishing lure attempting to harvest phone numbers and credentials."
+  },
+  {
+    "id": "claim_019",
+    "claim": "The Reserve Bank of India launched an official mobile application for retail digital rupee (CBDC) wallet management.",
+    "gold_verdict": "TRUE",
+    "category": "Banking & Digital Finance",
+    "source_factchecker": "RBI Official",
+    "original_rating": "True",
+    "held_out_source": null,
+    "claim_type": "news_claim",
+    "human_notes": "Retail e-Rupee pilot and participating banking wallet integrations documented in RBI circulars."
+  },
+  {
+    "id": "claim_020",
+    "claim": "An ancient subterranean pyramid was discovered underneath the Parliament building in New Delhi during renovations.",
+    "gold_verdict": "FALSE",
+    "category": "Archaeology & Myth",
+    "source_factchecker": "Factly",
+    "original_rating": "Hoax",
+    "held_out_source": "factly_parliament_pyramid_55",
+    "claim_type": "viral_forward",
+    "human_notes": "Fabricated clickbait story created using generative AI imagery."
+  }
+]
