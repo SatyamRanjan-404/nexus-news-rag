@@ -1,244 +1,272 @@
 # NEXUS Intelligence — AI News RAG & Claim Checker
 
-[![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen?style=flat-square&logo=github-actions)](.github/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue?style=flat-square&logo=python)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.111.0-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
-[![LangChain](https://img.shields.io/badge/LangChain-LCEL-black?style=flat-square&logo=langchain)](https://langchain.com)
-[![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-purple?style=flat-square)](https://trychroma.com)
-[![Cross-Encoder](https://img.shields.io/badge/Reranker-MS--MARCO--MiniLM-orange?style=flat-square)](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.111.0-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![LangChain](https://img.shields.io/badge/LangChain-LCEL-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://langchain.com)
+[![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-FC521F?style=flat-square)](https://trychroma.com)
+[![Groq](https://img.shields.io/badge/LLM-Groq%20Llama%203.3-F55036?style=flat-square)](https://groq.com)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-> **A production-grade, citation-grounded Retrieval-Augmented Generation (RAG) system with hybrid search, cross-encoder reranking, and an automated multi-tier News Claim Checker for rumor and viral forward verification.**
-
----
-
-## 🎯 Resume & Project Mapping
-
-This repository embodies the following production-tested achievements:
-
-| Resume Claim | Implementation in Repository | Measured Impact |
-| :--- | :--- | :--- |
-| **End-to-End RAG Pipeline** | Pluggable Recursive & Semantic Chunkers (`src/nexus/chunking/`), ChromaDB persistent vector store (`src/nexus/indexing/`), Cosine similarity search. | Seamless ingestion of full-text news from 27 live feeds. |
-| **Query Retrieval & Reranking** | Dense ChromaDB (`all-MiniLM-L6-v2`) + BM25 Sparse Search fused via Reciprocal Rank Fusion (RRF), rescored with Cross-Encoder (`ms-marco-MiniLM-L-6-v2`). | **Recall@5 boosted from 70.6% to 94.1%**; **MRR@5 improved from 0.49 to 0.84**. |
-| **Grounded Generation & FastAPI** | LangChain LCEL chain with strict citation attribution `[1]`, `[2]`, anti-hallucination abstention prompt, and async FastAPI endpoints with rate limiting. | **Hallucination rate reduced by 85.1%** (from 28.2% to 4.2% unsupported assertions). |
-| **Rigorous Evaluation Test Cases** | Curated QA benchmark (`eval/datasets/qa_eval_set.json`), Gold claim verification set (`eval/datasets/claim_eval_set.json`), and CI regression gate. | Automated validation of Recall@K, MRR, Groundedness, and Claim F1 on every PR. |
+> **A high-precision, citation-grounded Retrieval-Augmented Generation (RAG) platform and automated Claim Verification system for breaking news, regulatory circulars, and viral information.**
 
 ---
 
-## 🏗️ System Architecture
+## 📌 Overview
+
+**NEXUS Intelligence** is an end-to-end news synthesis and verification platform designed to address the key challenges of Large Language Models in current affairs: **knowledge cutoffs** and **hallucination**. 
+
+Rather than relying on ungrounded generative responses or unpredictable live web scraping, NEXUS maintains an indexed repository of primary government gazettes, regulatory announcements, certified fact-checker debunks, and credible news wires. It pairs a **two-stage hybrid retrieval engine** with strict **citation-enforced generation** to produce objective, fact-based answers and forensic audits of viral rumors.
+
+---
+
+## ✨ Key Features
+
+* **Multi-Tier News Ingestion:**
+  * Collects and processes articles across structured credibility tiers:
+    * **Tier 1:** Official statutory gazettes and regulators (RBI, SEBI, PIB, WHO, NASA).
+    * **Tier 2:** Certified fact-checking organizations (BOOM Live, Factly).
+    * **Tier 3:** Verified financial and general news wires (The Hindu, Livemint, Reuters).
+  * Automatically extracts clean full-text articles via statistical web parsing and eliminates syndicated wire duplicates using SimHash fingerprinting.
+
+* **Two-Stage Hybrid Retrieval & Reranking:**
+  * Combines dense semantic vector search (`sentence-transformers/all-MiniLM-L6-v2`) with sparse keyword matching (BM25) using **Reciprocal Rank Fusion (RRF)**.
+  * Re-ranks candidates using a dedicated **Cross-Encoder model** (`ms-marco-MiniLM-L-6-v2`) for deep token-level query-document attention.
+
+* **100% Grounded News Intelligence:**
+  * Powered by Groq-accelerated Llama 3.3 70B with LangChain Expression Language (LCEL).
+  * Enforces line-level bracketed citations `[1]`, `[2]` linking every fact directly to its source URL, publisher, and publication timestamp.
+  * Explicit abstention guardrails prevent speculative or out-of-corpus hallucinations.
+
+* **Forensic News Claim Checker:**
+  * Dedicated verification pipeline for viral claims, headlines, and social media forwards.
+  * Audits claims into structured verdicts (`TRUE`, `FALSE`, `MISLEADING`, `UNVERIFIED`) backed by confidence scores and supporting evidence snippets.
+
+* **Minimalist Aerospace Web Console:**
+  * Dark, high-contrast user interface inspired by industrial aerospace design for exploring intelligence queries and verifying claims in real time.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Language & Frameworks** | Python 3.10+, FastAPI, Uvicorn, Pydantic v2 |
+| **LLM & Orchestration** | LangChain (LCEL), Groq Cloud API (`llama-3.3-70b-versatile`, `llama-3.1-8b-instant`) |
+| **Vector Database & Embeddings** | ChromaDB (`PersistentClient`), `sentence-transformers/all-MiniLM-L6-v2` |
+| **Retrieval & Reranking** | Rank-BM25, Reciprocal Rank Fusion (RRF), Cross-Encoder (`cross-encoder/ms-marco-MiniLM-L-6-v2`) |
+| **Ingestion & Text Processing** | `feedparser`, `trafilatura`, `BeautifulSoup4`, `simhash`, `rapidfuzz` |
+| **User Interface** | Streamlit |
+| **Packaging & Deployment** | Docker, Docker Compose, Uvicorn ASGI |
+
+---
+
+## 🏗️ System Architecture & Methodology
 
 ```text
  ┌─────────────────────────────────────────────────────────────────────────────┐
- │                         3-TIER INGESTION PIPELINE                           │
+ │                         1. HIERARCHICAL INGESTION                           │
  │                                                                             │
- │  Tier 1: Official Sources      Tier 2: Fact-Checkers     Tier 3: News Media │
- │  (PIB, RBI, SEBI, WHO, NASA)   (AltNews, BOOM, Factly)  (The Hindu, BBC...) │
- └───────────────────────┬─────────────────────────────────────────────────────┘
-                         │ trafilatura (full-text extraction, 91% success)
-                         │ 64-bit SimHash (Hamming dedup, -31.6% wire duplicates)
-                         ▼
+ │  Tier 1: Official Gazettes     Tier 2: Fact-Checkers     Tier 3: News Media │
+ │  (RBI, SEBI, PIB, WHO)         (BOOM Live, Factly)       (The Hindu, Mint)  │
+ └──────────────────────────────────────┬──────────────────────────────────────┘
+                                        │ Full-Text Extraction (trafilatura)
+                                        │ Near-Duplicate Deduplication (SimHash)
+                                        ▼
  ┌─────────────────────────────────────────────────────────────────────────────┐
- │                         CHUNKING & INDEXING LAYER                           │
+ │                         2. CHUNKING & DUAL INDEXING                         │
  │                                                                             │
- │    ┌───────────────────────────┐         ┌─────────────────────────────┐    │
- │    │ Recursive Character Split │   OR    │ Semantic Embedding Chunker  │    │
- │    │ (500 chars / 50 overlap)  │         │ (Percentile breakpoint cuts)│    │
- │    └─────────────┬─────────────┘         └──────────────┬──────────────┘    │
- │                  ▼                                      ▼                   │
  │       ChromaDB Vector Store                     In-Memory BM25 Index        │
- │     (all-MiniLM-L6-v2 Embeddings)             (Probabilistic Keyword Match) │
+ │     (384-dim Dense Embeddings)                (Exact Token Inverted Index)  │
  └──────────────────┬──────────────────────────────────────┬───────────────────┘
                     │                                      │
                     └──────────────────┬───────────────────┘
                                        ▼
  ┌─────────────────────────────────────────────────────────────────────────────┐
- │                         HYBRID RETRIEVAL & RERANKING                        │
+ │                     3. TWO-STAGE RETRIEVE & RERANK                          │
  │                                                                             │
- │   1. Dense Search (Top 20)           2. BM25 Sparse Search (Top 20)         │
- │   3. Reciprocal Rank Fusion (RRF, k=60) ──► Candidate Top 20 Chunks         │
- │   4. Cross-Encoder Reranker (ms-marco-MiniLM-L-6-v2) ──► Re-ranked Top 5    │
+ │   1. Dense Search (Top 20)           2. BM25 Keyword Search (Top 20)        │
+ │   3. Reciprocal Rank Fusion (RRF)    ──► Merged Candidate Set               │
+ │   4. Cross-Encoder Reranker          ──► Filtered Top Context Passages      │
  └─────────────────────────────────────┬───────────────────────────────────────┘
                                        ▼
  ┌─────────────────────────────────────────────────────────────────────────────┐
- │                    GENERATION & CLAIM CHECKING ENGINE                       │
+ │                       4. GENERATION & VERIFICATION                          │
  │                                                                             │
- │   ┌───────────────────────────────┐     ┌───────────────────────────────┐   │
- │   │      FastAPI REST Layer       │     │   News Claim Checker Engine   │   │
- │   │  POST /v1/ask                 │     │  POST /v1/check-claim         │   │
- │   │  POST /v1/check-claim         │     │  - Tier 2 Prior Fact-Check    │   │
- │   │  GET  /v1/sources             │     │  - Tier 1 Official Corrob.    │   │
- │   │  GET  /health                 │     │  - Tier 3 News Consensus      │   │
- │   └──────────────┬────────────────┘     │  - Anti-Hallucination Abstain │   │
- │                  │                      └───────────────┬───────────────┘   │
- │                  ▼                                      ▼                   │
- │             Groq Cloud (Llama-3.3-70B-Versatile @ Temp 0.2)                 │
- │             Grounded Citations [1], [2] + Structured Verdicts               │
+ │   • Grounded Q&A Chain (LCEL): Synthesizes facts with line citations [1], [2]│
+ │   • Claim Auditor: Classifies claims into TRUE / FALSE / MISLEADING / UNVER.│
  └─────────────────────────────────────┬───────────────────────────────────────┘
                                        ▼
-                       Streamlit Observability UI (Port 8501)
+                     FastAPI REST Service & Streamlit Console
 ```
 
 ---
 
-## 🛡️ Unique Feature: The News Claim Checker
+## 📂 Project Structure
 
-Unlike typical fact-checking demos that simply query an LLM directly (and hallucinate), the **Nexus News Claim Checker** follows an authentic investigative protocol:
-
-1. **Atomic Normalization:** Decomposes complex viral claims into atomic, verifiable propositions while discarding subjective opinions.
-2. **Tier 2 Fact-Check Search:** Queries established fact-checking outlets (Alt News, BOOM, Factly, Vishvas News, Snopes) to find if the forward has already been audited. Reports ratings honestly as *"rated X by Y"*, never claiming the verdict as its own truth.
-3. **Tier 1 Official Corroboration:** Cross-examines government gazettes and statutory announcements (PIB, RBI, SEBI, WHO).
-4. **Tier 3 News Consensus:** Aggregates reporting from credible media, counting syndicated wire stories (e.g. PTI/Reuters copies) as a single independent source.
-5. **Leakage Prevention in Evaluation:** When evaluating the claim checker against real-world debunks, the source fact-check article is **strictly held out** from the retrieval index, forcing the system to substantiate claims directly from independent evidence.
-6. **Explicit Abstention:** If evidence is absent or contradictory, the system returns `UNVERIFIED` rather than guessing.
-
-```json
-// Example: POST /v1/check-claim
-{
-  "claim": "RBI has cancelled the legal tender status of all 500 rupee notes starting next month.",
-  "verdict": "FALSE",
-  "confidence": 0.96,
-  "explanation": "The Reserve Bank of India has issued no circular cancelling 500-rupee notes. All notes in circulation remain legal tender.",
-  "tier2_factcheck_found": true,
-  "factchecker_reference": "BOOM Live rated False / Hoax",
-  "tier1_official_confirmed": false,
-  "independent_sources_count": 3
-}
+```text
+nexus-news-rag/
+├── src/nexus/
+│   ├── api/                 # FastAPI REST API routes, models, and schemas
+│   │   ├── main.py          # REST endpoints (/v1/ask, /v1/check-claim, /health)
+│   │   └── models.py        # Pydantic request and response contracts
+│   ├── chunking/            # Recursive character and semantic chunking engines
+│   ├── claims/              # Forensic claim verification pipeline and models
+│   ├── config/              # Central configuration and environment settings
+│   ├── embeddings/          # Embedding model wrappers (all-MiniLM-L6-v2)
+│   ├── evaluation/          # Evaluation harness, metrics, and LLM judge
+│   ├── generation/          # Grounded LCEL RAG chains and prompt templates
+│   ├── indexing/            # ChromaDB vector store and BM25 index managers
+│   ├── ingestion/           # RSS fetching, full-text extraction, and dedup
+│   ├── rerank/              # Cross-Encoder joint scoring pipeline
+│   ├── retrieval/           # Hybrid RRF search and conversational query rewriter
+│   └── ui/                  # Streamlit web application
+├── data/                    # Snapshot datasets and local storage
+├── news_sources.json        # Configured registry of news feeds and credibility tiers
+├── app.py                   # Streamlit application entry point
+├── Dockerfile               # Container definition
+├── docker-compose.yml       # Multi-service deployment compose specification
+├── pyproject.toml           # Project dependencies and build configuration
+└── README.md                # Project documentation
 ```
 
 ---
 
-## 📊 Empirical Evaluation & Benchmark
+## 🚀 Getting Started
 
-All metrics were benchmarked against a curated 20-case QA evaluation dataset (`eval/datasets/qa_eval_set.json`) and a 20-claim gold verification suite (`eval/datasets/claim_eval_set.json`).
+### 1. Prerequisites
+* Python 3.10 or 3.11
+* A [Groq API Key](https://console.groq.com/) for LLM inference
 
-### 1. Retrieval Quality Ablation Study
+### 2. Installation
 
-| Retrieval Architecture | Recall@1 | Recall@3 | Recall@5 | MRR@5 | NDCG@5 | Latency (P50) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Baseline Dense (all-MiniLM-L6-v2, top_k=4)** | 0.3529 | 0.5882 | 0.7059 | 0.4902 | 0.5341 | 14.2 ms |
-| **Sparse Only (BM25)** | 0.2941 | 0.5294 | 0.6471 | 0.4216 | 0.4789 | 3.8 ms |
-| **Hybrid RRF (Dense + BM25, k=60)** | 0.5294 | 0.7647 | 0.8824 | 0.6716 | 0.7185 | 18.5 ms |
-| **Final: Hybrid RRF + Cross-Encoder Rerank** | **0.7647** | **0.8824** | **0.9412** | **0.8431** | **0.8710** | **42.1 ms** |
-
-### 2. End-to-End Generation & Hallucination Mitigation
-
-| Metric | Baseline RAG (v1.0) | Final Nexus RAG (v2.0) | Relative Delta |
-| :--- | :---: | :---: | :---: |
-| **Groundedness Score (1 - Hallucination)** | 0.718 | **0.958** | **+33.4%** |
-| **Hallucination Rate (Unsupported Assertions %)** | 28.2% | **4.2%** | **-85.1% relative reduction** |
-| **Citation Precision** | 0.440 | **0.945** | **+114.8%** |
-| **Citation Recall** | 0.520 | **0.920** | **+76.9%** |
-| **Contextual Relevance** | 0.612 | **0.935** | **+52.8%** |
-| **Abstention Accuracy on Out-of-Corpus Queries** | 33.3% | **100.0%** | Zero hallucinations on unanswerables |
-
----
-
-## ⚡ Quickstart & Local Setup
-
-### Option 1: Docker Compose (Recommended)
+Clone the repository and install dependencies:
 
 ```bash
-# 1. Clone repository
 git clone https://github.com/SatyamRanjan-404/nexus-news-rag.git
 cd nexus-news-rag
 
-# 2. Configure environment
-cp .env.example .env
-# Add your GROQ_API_KEY in .env
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate       # On Windows: .venv\Scripts\activate
 
-# 3. Start API and UI services
-docker-compose up --build
+# Install dependencies
+pip install -e .
 ```
-- **FastAPI OpenAPI Swagger:** `http://localhost:8000/docs`
-- **Streamlit Web Portal:** `http://localhost:8501`
 
-### Option 2: Local Python Virtual Environment
+### 3. Environment Configuration
+
+Create a `.env` file in the root directory:
 
 ```bash
-# 1. Create and activate virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+cp .env.example .env
+```
 
-# 2. Install dependencies (CPU-only PyTorch first)
-make install-dev
+Configure your environment variables:
 
-# 3. Run tests
-make test-unit
+```env
+GROQ_API_KEY=gsk_your_groq_api_key_here
+PORT=8000
+CHROMA_PERSIST_DIR=./data/chroma_db
+```
 
-# 4. Start backend & UI
-make run-api  # Terminal 1: FastAPI on port 8000
-make run-ui   # Terminal 2: Streamlit on port 8501
+---
+
+## 🖥️ Running the Application
+
+### Option A: Running with Streamlit Web Console
+To launch the interactive intelligence and claim checking portal:
+
+```bash
+streamlit run app.py
+```
+Access the web portal at `http://localhost:8501`.
+
+### Option B: Running the FastAPI REST Backend
+To run the high-performance API server:
+
+```bash
+uvicorn nexus.api.main:app --host 0.0.0.0 --port 8000 --reload
+```
+Interactive Swagger API documentation will be available at `http://localhost:8000/docs`.
+
+### Option C: Running with Docker Compose
+
+```bash
+docker-compose up --build
 ```
 
 ---
 
 ## 📡 REST API Reference
 
-### 1. RAG Question Answering
-`POST /v1/ask`
+### 1. Intelligence Query (`POST /v1/ask`)
+Generates a grounded, cited answer for a news or policy inquiry.
 
-```bash
-curl -X POST "http://localhost:8000/v1/ask" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "What repo rate decision was announced by the RBI Monetary Policy Committee?",
-    "top_k": 5,
-    "stream": false
-  }'
-```
-
-**Response (200 OK):**
+**Request:**
 ```json
+POST /v1/ask
+Content-Type: application/json
+
 {
-  "query": "What repo rate decision was announced by the RBI Monetary Policy Committee?",
-  "answer": "The RBI Monetary Policy Committee kept the policy repo rate unchanged at 6.50% [1], maintaining focus on withdrawal of accommodation to align inflation to 4.0% [2].",
-  "citations": [
-    {
-      "source_name": "RBI Press Releases",
-      "title": "Monetary Policy Committee Statement",
-      "url": "https://rbi.org.in/pressreleases/mpc.html",
-      "tier": 1
-    }
-  ],
-  "latency_ms": 384.2,
-  "chunks_retrieved": 5
+  "query": "What repo rate policy decision was announced by the RBI Monetary Policy Committee?",
+  "top_k": 4
 }
 ```
 
-### 2. News Claim Verification
-`POST /v1/check-claim`
-
-```bash
-curl -X POST "http://localhost:8000/v1/check-claim" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "claim": "RBI cancelled 500 rupee currency notes starting next week."
-  }'
+**Response:**
+```json
+{
+  "query": "What repo rate policy decision was announced by the RBI Monetary Policy Committee?",
+  "answer": "The Reserve Bank of India Monetary Policy Committee kept the policy repo rate unchanged at 6.50% [1], maintaining focus on withdrawal of accommodation to ensure inflation progressively aligns to the 4.0% target [2].",
+  "citations": [
+    {
+      "title": "Monetary Policy Committee (MPC) Statement on Policy Repo Rate",
+      "url": "https://rbi.org.in/pressreleases/mpc_resolution.html",
+      "source_name": "RBI Press Releases",
+      "tier": 1
+    }
+  ],
+  "latency_ms": 320.5
+}
 ```
 
-### 3. Source Directory & Health
-`GET /v1/sources` | `GET /health`
+### 2. Claim Verification (`POST /v1/check-claim`)
+Audits a headline, rumor, or forward against indexed primary gazettes and fact-checkers.
 
----
+**Request:**
+```json
+POST /v1/check-claim
+Content-Type: application/json
 
-## 🎓 Senior ML Interview Defense Guide
+{
+  "claim": "RBI has completely cancelled the legal tender status of all 500 rupee notes starting next month."
+}
+```
 
-### Q1: Why combine Dense vector search with BM25 via RRF instead of pure vector search?
-> **Answer:** Pure dense embedding retrieval is susceptible to vocabulary mismatch when queries involve exact keywords, acronyms, or proper nouns (e.g., *'TRAI'*, *'SEBI circular 2026/04'*, *'Rs 25,000 crore'*). BM25 excels at exact keyword match but misses semantic paraphrases. By utilizing Reciprocal Rank Fusion ($k=60$), we combine both ranked lists without requiring score normalization across disparate score spaces. In our ablation study, this raised Recall@5 from 70.6% (dense alone) to 88.2% (hybrid).
+**Response:**
+```json
+{
+  "claim": "RBI has completely cancelled the legal tender status of all 500 rupee notes starting next month.",
+  "verdict": "FALSE",
+  "confidence": 0.98,
+  "explanation": "The Reserve Bank of India has issued no directive or circular invalidating 500-rupee notes. All legal tender currency remains valid in circulation.",
+  "evidence_snippets": [
+    {
+      "title": "Fact Check: Viral Claim Alleging RBI Demonetisation of 500 Rupee Notes is Completely False",
+      "source": "BOOM Live Fact Check",
+      "tier": 2,
+      "url": "https://boomlive.in/fact-check/rbi-has-not-demonetised-500-rupee-currency-notes.html"
+    }
+  ]
+}
+```
 
-### Q2: Why use a Cross-Encoder reranker if it introduces additional latency?
-> **Answer:** Bi-encoders compress entire chunks into fixed-length 384-dimensional vectors, losing fine-grained cross-token interactions between the query and candidate documents. The Cross-Encoder (`ms-marco-MiniLM-L-6-v2`) evaluates query-document pairs jointly through all attention heads. By applying it only as a second stage on the top 20 retrieved candidates, we confine the latency penalty to ~25ms while increasing MRR@5 from 0.67 to 0.84 and Recall@1 from 0.52 to 0.76.
-
-### Q3: How was hallucination reduced by 85.1% in the final system?
-> **Answer:** Through three architectural safeguards:
-> 1. **Full-text extraction:** Switched from 500-char RSS `<summary>` snippets to full article text via `trafilatura`, giving the model complete facts.
-> 2. **Citation constraints:** System prompt enforces that every factual assertion must be cited with `[N]`, anchoring generation directly in retrieved text.
-> 3. **Explicit abstention:** The prompt explicitly instructs the LLM to output *"I cannot find explicit details about that topic in today's collected news reports"* if retrieved context does not directly answer the question, achieving 100% abstention on unanswerable test queries.
-
-### Q4: How does SimHash deduplication protect against news wire redundancy?
-> **Answer:** 90 RSS feeds frequently syndicate identical wire releases (e.g. PTI, Reuters) across dozens of regional newspapers. Re-indexing these causes ChromaDB to return redundant near-duplicate chunks, consuming the context window. We compute a 64-bit SimHash fingerprint over article tokens. If two articles share a Hamming distance $\le 3$, we cluster them as wire duplicates and retain only the highest-tier source (Tier 1 > Tier 2 > Tier 3). This reduced corpus volume by 31.6% without losing unique information.
+### 3. System Health (`GET /health`)
+Returns service and database health status.
 
 ---
 
 ## 📄 License
-This project is open-source under the MIT License.
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
